@@ -1,23 +1,28 @@
-#include <stdio.h>
+#include<stdio.h>
 
 int main(){
-    float preco;
-    float percentual;
-    float resultado;
-    float vdesc;
+    int n1;
+    int n2;
+    int soma;
+    int subtrair;
+    int multiplicar;
+    int dividir;
 
-    printf("digite o preço do produto: \n");
-    scanf("%f",&preco);
+    printf("digite um numero e tecle enter: \n");
+    scanf("%d" ,&n1);
 
-    printf("digite o desconton do produto: \n");
-    scanf("%f",&percentual);
+    printf("digite um numero e tecle enter:\n");
+    scanf("%d" ,&n2);
 
-    resultado = preco - (preco * (percentual /100));
+    soma = n1 + n2;
+    subtrair = n1 - n2;
+    multiplicar = n1 * n2;
+    dividir = n1 / n2;
 
-    vdesc = preco - resultado;
-
-    printf("o preço final do produto com desconto de %2.2fé %2.2f\n",vdesc,resultado);
+    printf("o resultado da soma é %d\n" ,soma);
+    printf("o resultado da subtração é %d\n",subtrair);
+    printf("o resultado da multiplicaçao é %d\n", multiplicar);
+    printf("o resultado da divisao é %d\n", dividir);
 
     return 0;
-
 }
