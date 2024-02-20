@@ -260,3 +260,131 @@ int main(){
         return 0;
       }
 ```
+#### tabuada.c
+
+```c
+#include<stdio.h>
+
+
+int main(){
+    int num, num2;
+    printf("digite um numero para a tabuada:\n");
+    scanf("%d",&num);
+    for(num2 = 1 ; num2 <= 10 ; num2++){
+    printf("%d x %d = %d\n",num,num2,(num*num2)); 
+    }
+    return 0;
+}
+```
+
+#### for.c
+```c
+#include<stdio.h>
+
+int main(){
+    int x;
+    for(x = 1; x <=10; x++){
+        printf("%d\n", x);
+
+    }
+    return 0;
+}
+```
+#### coleçoes_iguais.c
+
+```c
+#include<stdio.h>
+ 
+int main(){
+    int c1[10] = {10,5,68,8,47,12,54,13,62,11};
+ 
+    int c2[15] = {11,5,62,112,84,76,12,55,59,85,13,0,14,19,18};
+ 
+      int i, j;
+    int found = 0; 
+ 
+    printf("Números iguais nos dois arrays:\n");
+ 
+    
+    for (i = 0; i < 10; i++) {
+        
+        for (j = 0; j < 15; j++) {
+            if (c1[i] == c2[j]) {
+                printf("%d\n", c1[i]);
+                found = 1;
+                break;
+            }
+        }
+    }
+ 
+}
+```
+#### coleçao1.c
+
+```c
+#include<stdio.h>
+
+int main(){
+    int valores[5] = {10,5,8,12,7};
+    printf("%d\n",valores[0]);
+
+    return 0;
+}
+```
+
+#### coleçao2.c
+
+```c
+#include<stdio.h>
+int main(){
+ 
+    int loud[10] = {1,21,11,8,19,45,7,24,26,18};
+    int soma=0, media=0, i;
+    for( i=0 ; i <= 9 ; i++ ){
+        soma += loud[i];
+    }
+    printf("O resultado da soma é %d\n",soma);
+ 
+    for(i = 0 ; i < 10 ; i++){
+        media += loud[i];
+    }
+    printf("O resultado da média é %d\n",(media/10));
+    for(i = 0 ; i< 10 ; i++){
+        if( loud[i] % 2 == 0){
+            printf("%d\n",loud[i]);
+        }
+    }
+ 
+return 0;
+ 
+}
+
+```
+
+#### base
+
+```c
+#include<stdio.h>
+
+int main(){
+    int base,expoente, i , b;
+    printf("digite um numero para a base:\n");
+    scanf("%d", &base);
+
+    printf("digite um numero para o expoente");
+    scanf("%d",&expoente);
+
+b=base;
+for(i =1 ; i<expoente ; i++){
+base =  base *b;
+
+
+}
+   
+printf("%d",base);
+return 0;
+}
+    ```
+
+
+
