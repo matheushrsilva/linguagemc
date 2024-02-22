@@ -384,7 +384,66 @@ base =  base *b;
 printf("%d",base);
 return 0;
 }
-    ```
+ ```
+
+ #### pass_por_ref
+
+ ```c
+ #include<stdio.h>
+
+int subtrair(int *x, int *y){
+    printf("posição x %p e posiçao Y %p\n",x,y);
+    return *x - *y;
+}
 
 
+int main(){
+
+    int v1 = 10;
+    int v2 = 5;
+    printf("posiçao de v1 %p e posiçao de v2 %p\n",&v1,&v2);
+    int rs = subtrair(&v1,&v2);
+    printf("resultado é %d\n",rs);
+    return 0;
+}
+```
+
+#### pass_por_valor
+
+```c
+#include<stdio.h>
+int subtrair(int x, int y){
+    printf("Posição x é %p e y é %p\n",x,y);
+    return x - y;
+}
+ 
+int main(){
+    int v1 = 10;
+    int v2 = 5;
+    printf("posiçao v1 e %p e v2 e %p\n",&v1,&v2);
+    int rs =  subtrair(v1,v2);
+    printf("O resultado é %d\n",rs);
+    return 0;
+}
+```
+#### primeiro.h
+```c
+#include<sdtio.h>
+
+int quadrado(int x, int y){
+    return x* y;
+}
+```
+#### principal.c
+```c
+#include<stdio.h>
+#include "primeiro.h"
+
+
+int main(){
+      int rs = quadrado(5,7);
+      printf("a area do quadrado de 5 e 7 e %d\n",rs);
+      return 0;
+}
+```
 
